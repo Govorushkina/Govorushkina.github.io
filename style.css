@@ -3,10 +3,13 @@
   margin: 0;
   padding: 0;
 }
-
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
 header {
   width: 100%;
-background-color: rgb(255,206,236);
+background-color: rgb(183, 174, 255);
   height: 122px;
 }
 .head img {
@@ -30,7 +33,7 @@ background-color: rgb(255,206,236);
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-color: rgb(168, 255, 233);
+  background-color: rgb(21, 133, 79);
   height: 35px;
   align-content: center;
 }
@@ -46,7 +49,7 @@ background-color: rgb(255,206,236);
   text-align: center;
 }
 .main-table tr:nth-child(2n) {
-  background-color: rgb(255, 174, 174);
+  background-color: rgb(21, 133, 79);
 }
 .content li {
   margin-left: 25px;
@@ -57,7 +60,7 @@ form {
 }
 footer {
   width: 100%;
-  background-color: rgb(255, 169, 169);
+  background-color: rgb(183, 174, 255);
   height: 35px;
 }
 .footer p {
