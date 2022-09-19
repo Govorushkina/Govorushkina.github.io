@@ -3,10 +3,7 @@
   margin: 0;
   padding: 0;
 }
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-}
+
 header {
   width: 100%;
 background-color: rgb(255,206,236);
