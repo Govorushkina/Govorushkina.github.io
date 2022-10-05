@@ -1,1 +1,36 @@
-fgre
+
+* {
+  margin: 0;
+  padding :0;
+}
+
+header {
+background-color: rgb(183, 174, 255);
+}
+
+.title {
+  background-color: white;
+}
+.navigation {
+  background-color: rgb(21, 133, 79);
+}
+.main-table {
+  border: 1px solid rgb(0, 3, 49);
+}
+.main-table td {
+  border: 1px solid rgb(0, 3, 49);
+}
+.main-table tr:nth-child(2n) {
+  background-color: rgb(21, 133, 79);
+}
+.content li {
+  margin-left: 25px;
+  height: auto;
+}
+form {
+  margin: 20px;
+}
+footer {
+  background-color: rgb(183, 174, 255);
+}
+
