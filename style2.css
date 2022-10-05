@@ -1,13 +1,16 @@
 
-* {
-  margin: 0;
-  padding :0;
-}
 
 header {
 background-color: rgb(183, 174, 255);
 }
-
+.head img {
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin-left: 25px;
+  margin-top: 5px;
+  margin-right: 10px;
+}
 .title {
   background-color: white;
 }
@@ -34,3 +37,30 @@ footer {
   background-color: rgb(183, 174, 255);
 }
 
+{
+    header{
+        height: 120px;}
+    #Logop{
+        max-width: 960px;}
+
+    #logo{
+        height: 100px;
+        width: 120px;}
+    footer{
+        height: 130px;}
+}
+
+ header{
+        height: 14vh;
+    }
+
+    #logo {
+        height: 10vh;
+        width: 25vw;
+    }
+
+    #p{
+        text-align: left;
+        font-size: calc(3vh*1.2);
+    }
+}
