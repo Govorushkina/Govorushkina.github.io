@@ -1,8 +1,10 @@
 body{
-background-color:hsl(221, 100%, 13%);}
+  max-width:600px;
+background-color:hsl(221, 100%, 13%);
+text-align: center;
+height: 300px;
+margin: 0 auto;}
 #main{
-background-color:#cda2fd;}
-#result {
-font-size: 30px;
-margin: 0 auto;
+background-color:#cda2fd;
 }
+
