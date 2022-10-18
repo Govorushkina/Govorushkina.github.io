@@ -1,1 +1,47 @@
-h
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet"  href="style5.css">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <title>< Задание 6(5)></title>
+                <script src="Java.js"></script>
+	</head>
+<body>
+	<form><div id="main">
+		<h1>Калькулятор</h1>
+		<p>Количество товара:</p>
+		<input type="text" id="kolvo"   placeholder="0">
+		<p> Цена 1 товара:</p>
+		<input type="text" id="stoim" placeholder="0">
+		<p><input type="button" value="Подсчет стоимости" id="btn" onClick="onClick();"></p>
+		</div>
+	</form>
+<br><p>ИТОГО: </p>
+<div id="result"></div>
+
+  <div class="app">
+      <form>
+           Какое количество товара?
+        <input type="text" id="kol" placeholder="Количество"><br>
+    <select name="prodType" id="select">
+      <option value="1" > Первый тип</option>
+      <option value="2">Второй тип</option>
+      <option value="3">Третий тип</option>
+    </select>
+       
+          <div id="radios" style="display: none;">
+      <label><input type="radio" name="prodOptions" value="option1"> Первая опция</label>
+      <label><input type="radio" name="prodOptions" value="option2"> Вторая опция</label>
+      <label><input type="radio" name="prodOptions" value="option3"> Третья опция</label>
+    </div>
+  
+          <div id="checkboxes" style="display: block;">
+      <label><input type="checkbox" name="prop1">Новый товар</label>
+    </div>
+          </form>
+     Итоговая стоимость: <input type="text" id="result" disabled />
+    </div>
+  
+</body>
+</html>
