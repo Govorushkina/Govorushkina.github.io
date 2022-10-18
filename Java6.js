@@ -41,7 +41,7 @@ function updatePrice() {
     if (priceIndex >= 0) {
         price = prices.prodTypes[priceIndex];
     }
-    if (select.value === "3" || select.value === "1") {
+    if (select.value === "2") {
         radioDiv.style.display = "none";
     } else {
         radioDiv.style.display = "block";
