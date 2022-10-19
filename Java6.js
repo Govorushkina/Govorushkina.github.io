@@ -84,13 +84,13 @@ function updatePrice() {
 function getPrices() {
     return {
         prodOptions: {
-            option2: 10,
-            option3: 5
+            option2: 20,
+            option3: 30
         },
         prodProperties: {
-            prop1: 1
+            prop1: 10
         },
-        prodTypes: [100, 200, 150]
+        prodTypes: [200, 300, 400]
     };
 }
 
