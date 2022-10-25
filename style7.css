@@ -20,13 +20,13 @@ background-color: rgb(203, 220, 247);
   position: relative;
   }
   .slick-next{
-    rigth:25px;
+    rigth:25px !important;
 }
  .slick-prev{
-    rigth:15px;
+    rigth:15px !important;
 }
  .slick-dots{
-    position: relative;
+    position: relative !important;
 }
 @media (min-width:768px){
   .picture div img{
@@ -34,7 +34,7 @@ background-color: rgb(203, 220, 247);
       height: 175px;
     }
   .slick-prev{
-    left: -25px;
+    left: -25px !important;
   }
 }
   
