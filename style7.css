@@ -9,7 +9,7 @@ background-color: rgb(203, 220, 247);
   wigth:100px;
 }
 .picture{
-  max-wigth:925px;
+  max-wigth:260px;
   wigth:100 %;
   margin-top: 50px;
   height: auto;
@@ -28,7 +28,7 @@ background-color: rgb(203, 220, 247);
  .slick-dots{
     position: relative !important;
 }
-@media (min-width:768px){
+@media (min-width:560px){
   .picture div img{
      width: 150px;
       height: 175px;
