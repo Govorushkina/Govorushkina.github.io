@@ -1,1 +1,44 @@
-
+* {
+    margin: 0;
+    padding: 0;
+  }
+body{
+background-color: rgb!!!!!
+}
+.picture div img{
+  wigth:100px;
+}
+.picture{
+  max-wigth:925px;
+  wigth:100 %;
+  margin-top: 50px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  position: relative;
+  }
+  .slick-next{
+    rigth:25px;
+}
+ .slick-prev{
+    rigth:15px;
+}
+ .slick-dots{
+    position: relative;
+}
+@media (min-width:768px){
+  .picture div img{
+     width: 150px;
+      height: 175px;
+    }
+  .slick-prev{
+    left: -25px;
+  }
+}
+  
+  
+  
+  
+    
