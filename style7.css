@@ -12,7 +12,7 @@ background-color: rgb(203, 220, 247);
      width: 80vw;
       height: 20vh;
     }
- picture-item {
+img {
    margin: 0 auto;
    padding: 0 auto;
    height: calc(35vw*0.7);
@@ -30,7 +30,7 @@ background-color: rgb(203, 220, 247);
       height: 100vh;
       max-wigth:960px;
     }
- picture-item {
+img {
    margin: 0 auto;
    padding: 0 auto;
    height: calc(15vw*0.7);
