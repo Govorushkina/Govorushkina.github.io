@@ -1,6 +1,6 @@
 
 body{
-background-color: rgb(203, 20, 247);
+background-color: rgb(203, 220, 247);
   display:flex;
   justify-content:center;
 }
@@ -18,7 +18,7 @@ img {
    height: calc(35vw*0.9);
    width: 35vw;
     max-wigth:260px;
-    max-height:100px;
+    height:auto;
   }
 }
   
@@ -27,7 +27,7 @@ img {
     text-align:center;
     top:10vh;
      width: 80vw;
-      height: 100px;
+      height: auto;
       max-wigth:960px;
     }
 img {
