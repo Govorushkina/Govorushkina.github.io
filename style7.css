@@ -1,6 +1,6 @@
 
 body{
-background-color: rgb(203, 200, 247);
+background-color: rgb(203, 220, 247);
   display:flex;
   justify-content:center;
 }
@@ -17,7 +17,7 @@ img {
    padding: 0 auto;
    height: calc(35vw*0.7);
    width: 35vw;
-    max-wigth:170px;
+    max-wigth:260px;
     max-height:100px;
   }
 }
@@ -33,7 +33,7 @@ img {
 img {
    margin: 0 auto;
    padding: 0 auto;
-   height: calc(15vw*0.7);
+   height: calc(35vw*0.7);
    width: 15vw;
     max-wigth:150px;
     max-height:105px;
