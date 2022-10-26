@@ -17,7 +17,7 @@ img {
    padding: 0 auto;
    height: calc(35vw*0.9);
    width: 35vw;
-    max-wigth:260px;
+    max-width:260px;
     height:auto;
   }
 }
