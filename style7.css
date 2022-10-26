@@ -36,7 +36,7 @@ img {
    height: calc(35vw*0.7);
    width: 15vw;
     max-width:150px;
-    max-height:105px;
+    max-height:150px;
   }
 }
   
