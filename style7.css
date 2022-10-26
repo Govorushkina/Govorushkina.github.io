@@ -1,6 +1,6 @@
 
 body{
-background-color: rgb(203, 200, 247);
+background-color: rgb(203, 220, 247);
   display:flex;
   justify-content:center;
 }
@@ -16,9 +16,9 @@ background-color: rgb(203, 200, 247);
    margin: 0 auto;
    padding: 0 auto;
    height: calc(35vw*0.7);
-   width: 50vw;
-    max-wigth:260px;
-    max-height:160px;
+   width: 35vw;
+    max-wigth:170px;
+    max-height:100px;
   }
 }
   
@@ -26,16 +26,17 @@ background-color: rgb(203, 200, 247);
   .picture {
     text-align:center;
     top:10vh;
-     width: 150vw;
-      height: 175vh;
+     width: 80vw;
+      height: 100vh;
+      max-wigth:960px;
     }
  picture-item {
    margin: 0 auto;
    padding: 0 auto;
    height: calc(15vw*0.7);
-   width: 30vw;
-    max-wigth:200px;
-    max-height:180px;
+   width: 15vw;
+    max-wigth:150px;
+    max-height:105px;
   }
 }
   
