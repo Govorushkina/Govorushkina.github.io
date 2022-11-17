@@ -1,1 +1,42 @@
 
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Задание 8</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="style8.css" />
+  </head>
+  <body>
+    <button id="popup-btn">Показать форму</button>
+    <div class="popup-container" id="popup">
+      <div class="popup-content">
+        <button id="close-popup">Закрыть</button>
+        <form
+          action="https://formcarry.com/s/IShGIXWeWTv"
+          method="POST"
+          accept-charset="UTF-8"
+          id="send-form"
+        >
+          <input type="text" placeholder="Введите имя" name="name" id="name" /><br />
+          <input
+            type="email"
+            placeholder="Введите E-mail"
+            name="email"
+            id="email"
+          /><br />
+          <textarea name="msg" placeholder="Введите сообщение" id="msg"></textarea
+          ><br />
+          <input type="checkbox" name="policy" id="check" /> Согласен с
+          политикой обработки персональных данных <br />
+          <button type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+    <script src="Java8.js"></script>
+  </body>
+</html>
+
+
