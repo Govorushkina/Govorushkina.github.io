@@ -1,101 +1,73 @@
-/*global
-history, Slapform, addEventListener, $
-*/
-/*jslint browser */
-/*jslint devel */
-
-function openForm() {
-    history.pushState({page: 2}, "Form", "?form");
-    return false;
-}
-
-function openHome() {
-    history.replaceState({page: 1}, "Home", "?home");
-    return false;
-}
-
-$(document).ready(function () {
-    $(".myButton").click(function (event) {
-        openForm();
-        event.preventDefault();
-        $("#myOverlay").fadeIn(297, function () {
-            $("#myForm").css("display", "block").animate({opacity: 1}, 198);
-        });
-        if (localStorage.getItem("name").length > 0) {
-            document.querySelector("#name_polz").value =
-            localStorage.getItem("name");
-        }
-        if (localStorage.getItem("email").length > 0) {
-            document.querySelector("#email_polz").value =
-            localStorage.getItem("email");
-        }
-        if (localStorage.getItem("mes").length > 0) {
-            document.querySelector("#mes").value =
-            localStorage.getItem("mes");
-        }
-        if (localStorage.getItem("check") === "true") {
-            document.querySelector("#check").checked = true;
-        }
+document.addEventListener("DOMContentLoaded", function () {
+    hidePopUp();
+    window.history.pushState({ popup: "close" }, "popup", "./");
+    window.addEventListener("popstate", function (e) {
+      if (e.state.popup === "close") {
+        hidePopUp();
+      }
+      if (e.state.popup === "open") {
+        showPopUp();
+      }
     });
-
-    $("#myOverlay, #close").click(function () {
-        $("#myForm").animate({opacity: 0}, 198, function () {
-            $(this).css("display", "none");
-            $("#myOverlay").fadeOut(297);
-            openHome();
-        });
-    });
-
-    $("#lete").click(function () {
-        var slapform = new Slapform();
-        $("#lete").prop("disabled", true);
-        slapform.submit({
-            data: {
-                checkbox: localStorage.getItem("check"),
-                email: localStorage.getItem("email"),
-                message: localStorage.getItem("mes"),
-                name: localStorage.getItem("name")
-            },
-            form: "aXHxW8DxN"
-        }).then(function () {
-            alert("Ваше сообщение успешно отправлено!");
-        }).catch(function () {
-            alert("Ошибка отправки сообщения. Попробуйте ещё раз.");
-        });
-        document.querySelector("#name_polz").value = "";
-        document.querySelector("#email_polz").value = "";
-        document.querySelector("#mes").value = "";
-        document.querySelector("#check").checked = false;
-        localStorage.clear();
-        return false;
-    });
-
-    addEventListener("popstate", function () {
-        $("#myForm").animate({opacity: 0}, 198, function () {
-            $(this).css("display", "none");
-            $("#myOverlay").fadeOut(297);
-            openHome();
-        });
-    }, false);
-
-    $("#name_polz, #email_polz, #mes, #check").change(function () {
-        var nam = $("#name_polz").val();
-        var email = $("#email_polz").val();
-        var mes = $("#mes").val();
-        var check = $("#check").prop("checked");
-        localStorage.setItem("name", nam);
-        localStorage.setItem("email", email);
-        localStorage.setItem("mes", mes);
-        if (check) {
-            localStorage.setItem("check", true);
+    const closeBtn = document.getElementById("close-popup");
+    closeBtn.addEventListener("click", hidePopUp);
+    const popbtn = document.getElementById("popup-btn");
+    popbtn.addEventListener("click", showPopUp);
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+    const msg = document.getElementById("msg");
+    const check = document.getElementById("check");
+    const form = document.getElementById("send-form");
+    const URL = "https://formcarry.com/s/HhDnMI-5UW_";
+    name.value = localStorage.getItem("name");
+    email.value = localStorage.getItem("email");
+    msg.value = localStorage.getItem("msg");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      toLocalStorage();
+      let xhr = new XMLHttpRequest();
+      let formData = new FormData(form);
+      name.value = "";
+      email.value = "";
+      msg.value = "";
+      check.checked = false;
+      xhr.open("POST", URL, true);
+      xhr.setRequestHeader("Accept", "application/json");
+      xhr.responseType = "json";
+      xhr.send(formData);
+      xhr.onload = function () {
+        if (xhr.status !== 200) {
+          alert(
+            `Ошибка при выполнении запроса: ${xhr.status} - ${xhr.response.message}`
+          );
         } else {
-            localStorage.setItem("check", false);
+          alert(`Запрос удачно обработан!`);
+          console.log(xhr.response);
         }
-        if (nam.length > 0 && email.length > 0 && mes.length > 0 && check) {
-            $("#lete").prop("disabled", false);
-        } else {
-            $("#lete").prop("disabled", true);
-        }
-        return false;
+      };
+      xhr.onerror = function () {
+        alert("Вызвать запрос не удалось");
+      };
     });
-});
+  });
+  
+  function toLocalStorage() {
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+    const msg = document.getElementById("msg");
+    localStorage.setItem("name", name.value);
+    localStorage.setItem("email", email.value);
+    localStorage.setItem("msg", msg.value);
+  }
+  function hidePopUp() {
+    window.history.replaceState({ popup: "close" }, "popup", "./");
+    const popup = document.getElementById("popup");
+    popup.style.display = "none";
+  }
+  function showPopUp() {
+    window.history.replaceState({ popup: "open" }, "popup", "./form");
+    const popup = document.getElementById("popup");
+    popup.style.display = "block";
+  }
+  
+ 
