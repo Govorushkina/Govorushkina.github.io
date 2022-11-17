@@ -1,1 +1,37 @@
-
+* {
+    padding: 0;
+    margin: 0;
+  }
+  form {
+    margin-top: 20px;
+    text-align: center;
+  }
+  form input,
+  textarea,
+  select,
+  button {
+    margin-top: 5px;
+  }
+  .popup-container {
+    width: 100%;
+    min-height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+  }
+  .popup-content {
+    text-align: center;
+    max-width: 600px;
+    width: auto;
+    margin: 15px auto;
+    height: auto;
+    padding: 20px;
+    padding-bottom: 40px;
+    background-color: #ffdbdb;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+  }
+  #popup-btn {
+    margin: 10px;
+  }
