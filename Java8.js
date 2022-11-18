@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    hidePopUp();
+
     window.history.pushState({ popup: "close" }, "popup", "./");
     window.addEventListener("popstate", function (e) {
       if (e.state.popup === "close") {
