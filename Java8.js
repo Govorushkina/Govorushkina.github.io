@@ -63,12 +63,12 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("msg", msg.value);
   }
   function hidePopUp() {
-    window.history.replaceState({ popup: "close" }, "popup", "./");
+    history.replaceState({ popup: "close" }, "popup", "./");
     const popup = document.getElementById("popup");
     popup.style.display = "none";
   }
   function showPopUp() {
-    window.history.pushState({ popup: "open" }, "popup", "?form");
+    history.pushState({ popup: "open" }, "popup", "?form");
     const popup = document.getElementById("popup");
     popup.style.display = "block";
   }
