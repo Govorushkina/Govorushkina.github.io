@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-     popup.style.display = “none”;
+     popup.style.display = "none";
 
 
     window.addEventListener("popstate", function (e) {
