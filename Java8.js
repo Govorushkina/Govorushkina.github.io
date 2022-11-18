@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
     popup.style.display = "none";
   }
   function showPopUp() {
-    window.history.replaceState({ popup: "open" }, "popup", "./form");
+    window.history.pushState({ popup: "open" }, "popup", "?form");
     const popup = document.getElementById("popup");
     popup.style.display = "block";
   }
